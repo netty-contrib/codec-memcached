@@ -13,8 +13,17 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
+package io.netty.contrib.handler.codec.memcache;
+
+import io.netty.handler.codec.ByteToMessageDecoder;
+import io.netty.util.internal.UnstableApi;
 
 /**
- * Template contrib package-info.
+ * Abstract super class for both ascii and binary decoders.
+ * <p/>
+ * Currently it just acts as a common denominator, but will certainly include methods once the ascii protocol
+ * is implemented.
  */
-package io.netty.contrib.template;
+@UnstableApi
+public abstract class AbstractMemcacheObjectDecoder extends ByteToMessageDecoder {
+}

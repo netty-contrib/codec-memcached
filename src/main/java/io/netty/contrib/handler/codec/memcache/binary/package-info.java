@@ -13,18 +13,11 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package io.netty.contrib.template;
-
-import io.netty.buffer.api.Buffer;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.ByteToMessageDecoderForBuffer;
 
 /**
- * Example Netty extension.
+ * Implementations and Interfaces for the Memcache Binary protocol.
  */
-public class ExampleDecoder extends ByteToMessageDecoderForBuffer {
-    @Override
-    protected void decode(ChannelHandlerContext ctx, Buffer in) throws Exception {
-        ctx.fireChannelRead(in.split());
-    }
-}
+@UnstableApi
+package io.netty.contrib.handler.codec.memcache.binary;
+
+import io.netty.util.internal.UnstableApi;
